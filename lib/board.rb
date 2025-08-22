@@ -3,26 +3,22 @@ class Board
   attr_accessor :board
 
   def initialize
-    @board = print_board(board)
+    # Creates empty board
+    @board = Array.new(3) { Array.new(3, ' ') }
+    print_board
   end
 
-  def print_board(board)
+  def print_board
     # Column header
-    puts '  1   2   3'
-    puts ' '
-    row = '    |   |   '
+    puts '  0   1   2'
+    # row = '    |   |   '
     sep = ' ---+---+---'
 
     3.times do |r|
-      print(r + 1)
+      print r + 1
       puts " #{board[r][0]} | #{board[r][1]} | #{board[r][2]} "
-      puts row
+      # puts row
       puts sep unless r == 2
     end
   end
-
-  # Creates empty board
-  board = Array.new(3) { Array.new(3, ' ') }
-
-  print_board(board)
 end
