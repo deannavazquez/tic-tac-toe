@@ -1,8 +1,6 @@
-# The Human class represents a player who makes
-# selections via user input during the game.
 require_relative 'player'
 
-class HumanPlayer < Player # rubocop:disable Style/Documentation
+class HumanPlayer
   def initialize
     super(board, player_number)
     @symbol = choose_symbol

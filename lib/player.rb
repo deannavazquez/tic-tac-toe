@@ -1,18 +1,13 @@
-# controls player data and behavior
-require_relative 'board'
+# Controls player data and behavior
+class Player
+  attr_reader :number, :symbol
 
-class Player < Board # rubocop:disable Style/Documentation
-  def initialize(player_number = 1, symbol = 'X')
-    super
-    @player_number = player_number
+  def initialize(number, symbol)
+    @number = number
     @symbol = symbol
   end
 
-  def get_symbol
-    @symbol
+  def print_symbol
+    puts "Player #{@number} is #{@symbol}"
   end
-
-  # def assign_symbol(human_symbol)
-  #   @symbol = (human_symbol == 'X' ? 'O' : 'X')
-  # end
 end
