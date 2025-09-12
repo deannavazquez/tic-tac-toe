@@ -1,6 +1,7 @@
 # Controls player data and behavior
+
 class Player
-  attr_reader :number, :symbol
+  attr_accessor :number, :symbol
 
   def initialize(number, symbol)
     @number = number
@@ -8,6 +9,6 @@ class Player
   end
 
   def print_symbol
-    puts "Player #{@number} is #{@symbol}"
+    "Player #{@number} is #{@symbol}"
   end
 end
