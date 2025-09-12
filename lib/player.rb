@@ -9,6 +9,6 @@ class Player
   end
 
   def print_symbol
-    "Player #{@number} is #{@symbol}!"
+    "Player #{@number} is #{@symbol}"
   end
 end
